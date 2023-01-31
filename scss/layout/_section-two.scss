@@ -46,12 +46,15 @@
       border: none;
       border-radius: 2.4rem;
       row-gap: 1rem;
-      padding: 3rem 2.5rem;
+      padding: 5rem 4rem;
+      box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+      border-radius: 2.4rem;
       @include m.tablet {
-        padding: 2rem 3rem;
+        padding: 4rem 2rem;
       }
       @include m.desktop {
-        padding: 3rem 4rem;
+        box-shadow: none;
+        padding: 4rem 2rem;
       }
       @include m.desktopXL {
         padding: 4rem 6rem;
@@ -108,21 +111,27 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
-        color: #828282;
+        color: v.$white;
         // Button design
         padding: 0.9rem 1.3rem;
-        background-color: #e0e0e0;
+        background-color: #2d9cdb;
         border: none;
         border-radius: 1.2rem;
         cursor: pointer;
+        @include m.desktop {
+          color: #828282;
+          background-color: #e0e0e0;
+        }
       }
       &:hover {
-        box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
-        border-radius: 2.4rem;
+        @include m.desktop {
+          box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+          border-radius: 2.4rem;
 
-        .card-button {
-          color: v.$white;
-          background-color: #2d9cdb;
+          .card-button {
+            color: v.$white;
+            background-color: #2d9cdb;
+          }
         }
       }
     }
