@@ -1,4 +1,4 @@
-#Checkout page
+#Edie homepage
 
 Solution for a challenge from [Devchallenges.io](http://devchallenges.io).
 
