@@ -1,0 +1,96 @@
+/*************** header ***************/
+
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.header {
+  margin: 0 1.7rem 0 1rem;
+
+  @include m.tablet {
+    margin: 0 5.6rem 0 5.2rem;
+  }
+
+  @include m.desktop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 5.6rem 0 5.2rem;
+  }
+
+  span {
+    cursor: pointer;
+  }
+}
+
+.left-section {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+
+  .edie-title {
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+    color: #333333;
+    @include m.desktop {
+      font-size: 3.6rem;
+      line-height: 5.3rem;
+    }
+  }
+
+  #menu {
+    @include m.desktop {
+      display: none;
+    }
+  }
+}
+
+.nav {
+  display: none;
+  @include m.desktop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  a {
+    text-decoration: none;
+    color: v.$black;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2.6rem;
+
+    &:first-child {
+      padding-top: 1.2rem;
+    }
+    &:last-child {
+      padding-bottom: 1.2rem;
+    }
+    @include m.desktop {
+      font-size: 2.4rem;
+      line-height: 3.6rem;
+
+      &:not(:first-child) {
+        margin: 0 0 0 2rem;
+      }
+      &:first-child {
+        padding-top: 0;
+      }
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #f2f2f2;
+  a {
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,141 @@
+/*************** footer ***************/
+
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+footer {
+  background-color: #100e1d;
+  display: flex;
+  flex-direction: column;
+
+  .footer-container {
+    margin: 3.6rem 3.2rem 19.5rem 3.2rem;
+    display: flex;
+    flex-direction: column;
+
+    @include m.tablet {
+      margin: 3.6rem 3.2rem 11.8rem;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-around;
+    }
+
+    // links
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        width: fit-content;
+        a {
+          font-family: v.$poppins;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 3.6rem;
+          color: #ffffff;
+        }
+      }
+    }
+
+    // social
+    .edie-social {
+      display: flex;
+      flex-direction: column;
+      margin-top: 6.4rem;
+      margin-bottom: 6.5rem;
+      @include m.tablet {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      h2 {
+        font-family: v.$heebo;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 3.6rem;
+        line-height: 5.3rem;
+        color: #f2f2f2;
+      }
+      ul {
+        margin-top: 3rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+
+        li:nth-child(2){
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+      }
+    }
+
+    // form
+    form {
+      p {
+        color: #f2f2f2;
+      }
+
+      .email-submit {
+        display: flex;
+        justify-content: space-between;
+        background: #f2f2f2;
+        border-radius: 1.2rem;
+
+        input[type="email"] {
+          border: 0;
+          background-color: transparent;
+          padding: 1.2rem 0 1.2rem 1.2rem;
+
+          &:focus {
+            outline: none;
+          }
+
+          &::placeholder {
+            font-family: v.$poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+            color: #bdbdbd;
+          }
+        }
+
+        button {
+          border: 0;
+          padding: 0 2rem 0 2rem;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 1.4rem;
+          line-height: 2.1rem;
+          color: #f2f2f2;
+          background: #2d9cdb;
+          border-radius: 1.2rem;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .footer-text {
+    margin: 0 3rem 2.4rem 3rem;
+    font-family: v.$montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    text-align: center;
+    color: #a9a9a9;
+
+    .username {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+}

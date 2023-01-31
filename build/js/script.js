@@ -1,0 +1,2 @@
+let hamburgerButton=document.querySelector("#menu"),nav=document.querySelector("nav"),menuOpened=!1;hamburgerButton.onclick=()=>{window.matchMedia("(max-width: 991.50px)").matches&&(menuOpened?(menuOpened=!1,nav.classList.remove("mobile-menu"),hamburgerButton.textContent=" menu "):(menuOpened=!0,nav.classList.add("mobile-menu"),hamburgerButton.textContent=" close "))};
+//# sourceMappingURL=script.js.map

@@ -1,0 +1,144 @@
+/*************** section one ***************/
+
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.section-one {
+  margin: 0 1.7rem 0 1rem;
+  @include m.tablet {
+    margin: 0 5.6rem 0 5.2rem;
+  }
+
+  #block-01 {
+    padding: 2rem 4.6rem 1.5rem 3rem;
+    @include m.tablet {
+      padding: 2rem 33rem 1.5rem 5rem;
+    }
+    @include m.desktop {
+      padding: 2rem 25rem 6rem 8rem;
+    }
+    @include m.desktopXL {
+      padding: 2rem 40rem 6rem 20rem;
+    }
+    @include m.desktopXXL {
+      padding: 2rem 60rem 6rem 20rem;
+    }
+
+    h2 {
+      font-weight: bold;
+      font-size: 2.4rem;
+      line-height: 3.6rem;
+      color: #333333;
+      @include m.desktop {
+        font-size: 4.8rem;
+        line-height: 7.2rem;
+      }
+    }
+
+    #teaser-01 {
+      font-family: v.$poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      color: #2d9cdb;
+      @include m.desktop {
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+      }
+    }
+  }
+
+  picture > * {
+    border-radius: 1.8rem;
+  }
+
+  #block-02 {
+    padding: 2rem 4.6rem 1.5rem 3rem;
+    @include m.tablet {
+      padding: 2rem 35rem 1.5rem 5rem;
+    }
+    @include m.desktop {
+      padding: 6rem 35rem 1.5rem 8rem;
+    }
+    @include m.desktopXL {
+      padding: 6rem 57rem 1.5rem 20rem;
+    }
+    @include m.desktopXXL {
+      padding: 6rem 73rem 1.5rem 20rem;
+    }
+
+    h2 {
+      margin-right: 4.6rem;
+      font-weight: bold;
+      font-size: 2.4rem;
+      line-height: 3.6rem;
+      color: #333333;
+      @include m.desktop {
+        font-size: 4.8rem;
+        line-height: 7.2rem;
+      }
+    }
+    p {
+      font-family: v.$poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: #828282;
+      @include m.tablet {
+        padding-right: 2rem;
+      }
+      @include m.desktop {
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+        padding-right: 2rem;
+      }
+      @include m.desktopXXL {
+        padding-right: 2rem;
+      }
+    }
+    .form {
+      .email-submit {
+        display: flex;
+        justify-content: space-between;
+        background: #f2f2f2;
+        border-radius: 1.2rem;
+
+        input[type="email"] {
+          border: 0;
+          background-color: transparent;
+          padding: 1.2rem 0 1.2rem 1.2rem;
+
+          &:focus {
+            outline: none;
+          }
+
+          &::placeholder {
+            font-family: v.$poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+            color: #bdbdbd;
+          }
+        }
+
+        button {
+          border: 0;
+          padding: 0 2rem 0 2rem;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 1.4rem;
+          line-height: 2.1rem;
+          color: #f2f2f2;
+          background: #2d9cdb;
+          border-radius: 1.2rem;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

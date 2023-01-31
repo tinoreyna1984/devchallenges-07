@@ -1,0 +1,43 @@
+/*************** mixins ***************/
+
+@use "variables" as v;
+
+/* Media queries */
+
+@mixin phone {
+    @media (min-width: v.$telefono) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+
+@mixin desktopXL {
+    @media (min-width: v.$desktopXL) {
+        @content;
+    }
+}
+
+@mixin desktopXXL {
+    @media (min-width: v.$desktopXXL) {
+        @content;
+    }
+}
+
+/* remove list format */
+@mixin list-without-format {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+

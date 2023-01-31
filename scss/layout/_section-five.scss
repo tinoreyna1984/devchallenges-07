@@ -1,0 +1,71 @@
+/*************** section five ***************/
+
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.section-five {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 10rem 1rem;
+  @include m.tablet {
+    margin: 20rem 16.5rem;
+  }
+  @include m.desktopXL {
+    width: 93.7rem;
+  }
+
+  .testimony {
+    margin: 0 0 1.8rem 0;
+    font-family: v.$poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    color: #333333;
+
+    @include m.tablet {
+      font-size: 3.6rem;
+      line-height: 5.4rem;
+    }
+  }
+
+  .author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    .author-image > * {
+      width: 8.2rem;
+      height: 8.2rem;
+      background: #c4c4c4;
+      border-radius: 1.2rem;
+    }
+
+    .author-data {
+      display: flex;
+      flex-direction: column;
+      margin-left: 3rem;
+
+      h4 {
+        margin: 0;
+        font-family: v.$poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+        color: #333333;
+      }
+      p {
+        margin: 1.2rem 0 0 0;
+        font-family: v.$poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+        color: #828282;
+      }
+    }
+  }
+}
